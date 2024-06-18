@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="148.66.128.144,20208.ttpV2.sa"
+  DTS:DTSID="{23CCF8A5-C062-4891-A644-2B3A053A1967}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=148.66.128.144,20208;User ID=sa;Initial Catalog=ttpV2;Provider=MSOLEDBSQL.1;Application Name=SSIS-ttpSync-{23CCF8A5-C062-4891-A644-2B3A053A1967}148.66.128.144,20208.ttpV2.sa;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAtcO8QDtfGEO011lqrhpL6QAAAAACAAAAAAAQZgAAAAEAACAAAADwgvoFxnvQg3V9EYoDc/Hf6IlulApaXhmtDNCT/EgkEQAAAAAOgAAAAAIAACAAAAATyDQ847ex7O6OV2/5N66ZL9UcRHUyw/RmraqhDg7smIAAAACzxfFSeHELb6cwrss32nyuum7ibcs3M4+Urz2Q8LZa0evNeKdBPZ/76s8JmeGSSJkDSQ6xkccIwZR2rcsRweVTOsndgPzk0NVhIHZaz8SZDm1HUhYNt+9L9zkLmAmbSfYg045yI18xWO3TzZb8DbHqJOQJNuMzM5RH3AD68YaqFEAAAADvXP8VDmmC+7Nru6ybgchPoHd6b01wqBfcnY1jB804hY2UgJoXmE73g5yLdj0aKOsucHEBWgGixG/mUGORHPPf</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="__sqlexpress.TTPNew.sa"
+  DTS:DTSID="{A5D51BB8-D09D-46DF-89F0-9AD3474FA884}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=.\sqlexpress;User ID=sa;Initial Catalog=TTPNew;Provider=SQLOLEDB.1;Application Name=SSIS-ttpSync-{A5D51BB8-D09D-46DF-89F0-9AD3474FA884}.\sqlexpress.TTPNew.sa;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAtcO8QDtfGEO011lqrhpL6QAAAAACAAAAAAAQZgAAAAEAACAAAACTuRl8m/SC2FsB8YNar2pIRPyi/ksUF4UTLJ5ZjaQwGAAAAAAOgAAAAAIAACAAAAA2ypKUN8TSIDAeDKjKTHsTvPhLdEyS6CyLTRxDAa6iJIAAAADdiDIKy+7348uGDH07LeYhr59F/mfoDy6ijrl30nQ2tha6UPatIWPJwE5Jso1fcYKGP2icmCmpoX/fOkw13DlOAZoDAAoLfYKyIHYecbr+IRDXLWP/TDjkK26qYFnRmx0n7Y4PTgfVKm2k+ZwSCm4Dojp2zQkaazv3VtBHjxBmN0AAAAC2DSVsr11fjCTFrzF5lkoeLC81ZxV//9z33HkifmwqbTqqn6pEWFkMzOeNLh4LMKhmimg7nrhEfd90rH+aszkV</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

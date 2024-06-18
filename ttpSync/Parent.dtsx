@@ -1,0 +1,289 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/3/2024 7:57:09 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-BH9PVKM"
+  DTS:CreatorName="DESKTOP-BH9PVKM\SUKTE"
+  DTS:DTSID="{B955CCE2-3145-408A-91C1-86FFA63FAA27}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5467.0"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{9E3F8713-B55A-4D91-A9C4-94EADA7CEDC5}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Students.dtsx]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{5D726E06-8295-4C45-AC87-8F98F7D2C8A1}"
+      DTS:ObjectName="Students.dtsx">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::PackageFullPath]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="abcpath\abc" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A17B84E0-3963-4BB6-BE19-F121549FF2CA}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="AllPackages">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{0C432723-DE29-4908-885D-D528587BC36C}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::PackagePath] + &quot;\\&quot; + @[User::PackageName]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="PackageFullPath">
+      <DTS:VariableValue
+        DTS:DataType="8">abcpath\abc</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2F8A05E4-DF70-49FE-96BF-29108691E23E}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="PackageName">
+      <DTS:VariableValue
+        DTS:DataType="8">abc</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{73E32863-CB9F-4EBE-AED4-871D0B992E35}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="PackagePath">
+      <DTS:VariableValue
+        DTS:DataType="8">abcpath</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3E87A715-CF4C-4451-AFDE-C5C4CA7BE689}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="passLastUpdatedDate">
+      <DTS:VariableValue
+        DTS:DataType="7">6/3/2024 3:16:00 PM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E479C933-FDF5-4BB9-9433-BD035AADB3C7}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="passOrgId">
+      <DTS:VariableValue
+        DTS:DataType="3">145</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{DC77E77B-43E0-4584-B355-59A87D3865B0}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="passSubOrgId">
+      <DTS:VariableValue
+        DTS:DataType="3">31851</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E8831D90-8840-421B-B40C-E9B5543FDC6D}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="passTableName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Foreach Loop Container"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{F4C2552D-D2E0-4C89-A7F8-ED349710393C}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach Loop Container">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachADOEnumerator"
+        DTS:DTSID="{969C3C8C-DCEF-4508-9105-63538AAA2201}"
+        DTS:ObjectName="{969C3C8C-DCEF-4508-9105-63538AAA2201}">
+        <DTS:ObjectData>
+          <FEEADO
+            EnumType="EnumerateRowsInFirstTable"
+            VarName="User::AllPackages" />
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Execute Package Task"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{B5EC158A-050D-4E15-B7F5-7E2BDAFB782F}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute Package Task"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <Connection>{5D726E06-8295-4C45-AC87-8F98F7D2C8A1}</Connection>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{E7A4F320-353F-4C55-91A1-E8F4168440EA}"
+          DTS:ObjectName="{E7A4F320-353F-4C55-91A1-E8F4168440EA}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::PackageName" />
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{19BFB0B2-2B68-4C25-89E2-6BF774578F3C}"
+          DTS:ObjectName="{19BFB0B2-2B68-4C25-89E2-6BF774578F3C}"
+          DTS:ValueIndex="1"
+          DTS:VariableName="User::PackagePath" />
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{38FCF13C-3817-447D-9BB6-D604299FF715}"
+          DTS:ObjectName="{38FCF13C-3817-447D-9BB6-D604299FF715}"
+          DTS:ValueIndex="2"
+          DTS:VariableName="User::passOrgId" />
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{A36AC0DF-A5C9-40D8-A7EF-1B91B812A70C}"
+          DTS:ObjectName="{A36AC0DF-A5C9-40D8-A7EF-1B91B812A70C}"
+          DTS:ValueIndex="3"
+          DTS:VariableName="User::passSubOrgId" />
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{6109F12F-83C8-4FCE-9305-FEE8CB5E3A4D}"
+          DTS:ObjectName="{6109F12F-83C8-4FCE-9305-FEE8CB5E3A4D}"
+          DTS:ValueIndex="4"
+          DTS:VariableName="User::passTableName" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Get Packages"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{47746518-CCFF-4ED7-91AB-1123CF3F4134}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get Packages"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:PropertyExpression
+        DTS:Name="SqlStatementSource">"Select PackageName,PackagePath,OrgId,SubOrgId,TableName from PackageDetail where OrgId=" + (DT_WSTR,7) @[$Project::OrgId] + " and SubOrgId=" + (DT_WSTR,7) @[$Project::SubOrgId] +" and Active=1 order by Sequence"</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A5D51BB8-D09D-46DF-89F0-9AD3474FA884}"
+          SQLTask:SqlStatementSource="Select PackageName,PackagePath,OrgId,SubOrgId,TableName from PackageDetail where OrgId=145 and SubOrgId=31851 and Active=1 order by Sequence"
+          SQLTask:ResultType="ResultSetType_Rowset" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::AllPackages" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{1DE0CB0F-2B6E-4005-B157-B6A724FA312F}"
+      DTS:From="Package\Get Packages"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Foreach Loop Container" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="184.8,41.6"
+          Id="Package\Foreach Loop Container\Execute Package Task"
+          TopLeft="63.6999907612805,42.3333351447848" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="320.8,150.4"
+          Size="320.8,193.6"
+          Id="Package\Foreach Loop Container"
+          TopLeft="169.166659944588,142.133334462908" />
+        <NodeLayout
+          Size="143.2,41.6"
+          Id="Package\Get Packages"
+          TopLeft="187.49999254942,45.0666670248244" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="259.09999254942,86.6666670248244">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="70.466667395168,55.4666674380836"
+              Start="0,0"
+              End="70.466667395168,47.9666674380836">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.7333337190418" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.7333337190418"
+                    Point2="0,27.7333337190418"
+                    Point3="4,27.7333337190418" />
+                  <mssgle:LineSegment
+                    End="66.466667395168,27.7333337190418" />
+                  <mssgle:CubicBezierSegment
+                    Point1="66.466667395168,27.7333337190418"
+                    Point2="70.466667395168,27.7333337190418"
+                    Point3="70.466667395168,31.7333337190418" />
+                  <mssgle:LineSegment
+                    End="70.466667395168,47.9666674380836" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

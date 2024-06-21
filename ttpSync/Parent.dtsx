@@ -9,10 +9,10 @@
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5467.0"
   DTS:LocaleID="16393"
-  DTS:ObjectName="Package1"
+  DTS:ObjectName="Parent"
   DTS:PackageType="5"
-  DTS:VersionBuild="21"
-  DTS:VersionGUID="{9E3F8713-B55A-4D91-A9C4-94EADA7CEDC5}">
+  DTS:VersionBuild="26"
+  DTS:VersionGUID="{A85EA3ED-2B5C-4141-87B9-3E109C5CD6F6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -76,6 +76,15 @@
       DTS:ObjectName="PackagePath">
       <DTS:VariableValue
         DTS:DataType="8">abcpath</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F5D11C63-A814-4658-BDEE-ADF6080E89B1}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="passBatchId">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -198,11 +207,11 @@
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:PropertyExpression
-        DTS:Name="SqlStatementSource">"Select PackageName,PackagePath,OrgId,SubOrgId,TableName from PackageDetail where OrgId=" + (DT_WSTR,7) @[$Project::OrgId] + " and SubOrgId=" + (DT_WSTR,7) @[$Project::SubOrgId] +" and Active=1 order by Sequence"</DTS:PropertyExpression>
+        DTS:Name="SqlStatementSource">"Select PackageName,PackagePath,OrgId,SubOrgId,TableName,BatchId from PackageDetail where OrgId=" + (DT_WSTR,7) @[$Project::OrgId] + " and SubOrgId=" + (DT_WSTR,7) @[$Project::SubOrgId] +" and Active=1 order by Sequence"</DTS:PropertyExpression>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{A5D51BB8-D09D-46DF-89F0-9AD3474FA884}"
-          SQLTask:SqlStatementSource="Select PackageName,PackagePath,OrgId,SubOrgId,TableName from PackageDetail where OrgId=145 and SubOrgId=31851 and Active=1 order by Sequence"
+          SQLTask:SqlStatementSource="Select PackageName,PackagePath,OrgId,SubOrgId,TableName,BatchId from PackageDetail where OrgId=145 and SubOrgId=31851 and Active=1 order by Sequence"
           SQLTask:ResultType="ResultSetType_Rowset" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
             SQLTask:ResultName="0"
@@ -232,7 +241,7 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="184.8,41.6"
           Id="Package\Foreach Loop Container\Execute Package Task"
@@ -247,33 +256,21 @@
         <NodeLayout
           Size="143.2,41.6"
           Id="Package\Get Packages"
-          TopLeft="187.49999254942,45.0666670248244" />
+          TopLeft="263.333322869408,39.0000003099442" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="259.09999254942,86.6666670248244">
+          TopLeft="332.249991406998,80.6000003099442">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="70.466667395168,55.4666674380836"
+              EndConnector="0,61.5333341529638"
               Start="0,0"
-              End="70.466667395168,47.9666674380836">
+              End="0,54.0333341529638">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.7333337190418" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,23.7333337190418"
-                    Point2="0,27.7333337190418"
-                    Point3="4,27.7333337190418" />
-                  <mssgle:LineSegment
-                    End="66.466667395168,27.7333337190418" />
-                  <mssgle:CubicBezierSegment
-                    Point1="66.466667395168,27.7333337190418"
-                    Point2="70.466667395168,27.7333337190418"
-                    Point3="70.466667395168,31.7333337190418" />
-                  <mssgle:LineSegment
-                    End="70.466667395168,47.9666674380836" />
+                    End="0,54.0333341529638" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -282,6 +279,13 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <AnnotationLayout
+          Text=""
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="28.8,40"
+          Id="8897b0e9-0fcd-475f-a9b1-908cbb9df8eb"
+          TopLeft="554.166644646063,135.200001074473" />
       </GraphLayout>
     </LayoutInfo>
   </Package>

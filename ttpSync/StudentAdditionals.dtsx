@@ -12,8 +12,8 @@
   DTS:LocaleID="16393"
   DTS:ObjectName="StudentAdditionals"
   DTS:PackageType="5"
-  DTS:VersionBuild="119"
-  DTS:VersionGUID="{4F7C1CCE-A39A-4FE2-8401-FF08149B711F}">
+  DTS:VersionBuild="120"
+  DTS:VersionGUID="{6FB80793-7DD4-4937-BFEA-651DBDAC8C89}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,7 +30,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAtcO8QDtfGEO011lqrhpL6QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADGMho2g0NMfit/4VG4fzUEb+YOmji1rPYLVrcqPqvskgAAAAAOgAAAAAIAACAAAAD60MzQGQQiuTkbK6RrK55rhBoYeK0Was6iL1pasb2zcBAAAADKTW5dCjvH1Y74yjv+i2KHQAAAAKGl6ws2HQ80c/vDGqRV115b4hdIaF8DujuKsUV4lBa7eOJtmKtT/idyLTxzV6zXQIpEb35Z4vYmaj/9mdoXEI4</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAtcO8QDtfGEO011lqrhpL6QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAn0tXDPWehituIIoI3g9yM+X4NF4q6sesNVohO/nawwwAAAAAOgAAAAAIAACAAAABOdiw7VxcrrLVVh/ymoiyU6jiXrppqtRDJZ0eOVRJphhAAAACvyh5NjP73ceptz3232kiWQAAAAOcK4/33gtY8QvP+eg0ysuXEQwwLYed8S1fqr22R62CPtJvCRoKDDOY947+PokXC4b03Wco5cdun0bwoP1gSR/g</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -47,7 +47,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAtcO8QDtfGEO011lqrhpL6QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABPA40Ys7ovd+iuUGwFIroC5b2jOvzrtVaYoFdHcw8QWQAAAAAOgAAAAAIAACAAAAAHwBcPbgSAqJxBIFYJPIj9cSS7drHoqzzco/nRvjqOMRAAAACgzHxt29P6ShzJOWyXPyyPQAAAANnqHxPeOcx8nJ+ctuaik5AAQoPU903VmBn1jY+me+z0s6tggVyK1UsGrNrk/2k56XCKy8wRNKD3zkEjffM7WAM</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAtcO8QDtfGEO011lqrhpL6QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABjSXGoVpay7Fe5ICMK9WHNzqUM6TIb2+jBeFEeVD+kxgAAAAAOgAAAAAIAACAAAAAaRFTJY0a6OCPSkiy3OYaLzkyBENSIIqwwU8Eyu4AM5RAAAABtGL/sA7tDWGrtS++JEXABQAAAADhPxDr/kS5sYfIILiaFPGckw1rFR96VR5PgnYE6hcKv56Vp4Jw+J1k34FdBtysK/kccZKOSIdcCQ0/upDyTUvo</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1113,7 +1113,7 @@ WHERE [SyncId] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{1DF99AEE-4996-4C9E-A995-30F97DF2B790}"
-          SQLTask:SqlStatementSource="select LastUpdatedValue from Config_table where OrgId =? and TableName=?"
+          SQLTask:SqlStatementSource="select LastUpdatedValue from ConfigTable where OrgId =? and TableName=?"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
             SQLTask:ResultName="LastUpdatedValue"
@@ -1152,14 +1152,35 @@ WHERE [SyncId] = ?</property>
           ReadOnlyVariables="passOrgId"
           ReadWriteVariables="User::getOrgId">
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_1c0aeb4a8c0a42f3b10dbe43215c89bc")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_1c0aeb4a8c0a42f3b10dbe43215c89bc")]
+[assembly: AssemblyCopyright("Copyright @  2024")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -1531,35 +1552,14 @@ namespace ST_1c0aeb4a8c0a42f3b10dbe43215c89bc.Properties {
   </ProjectExtensions>
 </Project>]]></ProjectItem>
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_1c0aeb4a8c0a42f3b10dbe43215c89bc")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_1c0aeb4a8c0a42f3b10dbe43215c89bc")]
-[assembly: AssemblyCopyright("Copyright @  2024")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -1759,14 +1759,35 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           ReadOnlyVariables="passTableName"
           ReadWriteVariables="User::getTableName">
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_1c0aeb4a8c0a42f3b10dbe43215c89bc")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_1c0aeb4a8c0a42f3b10dbe43215c89bc")]
+[assembly: AssemblyCopyright("Copyright @  2024")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -2138,35 +2159,14 @@ namespace ST_1c0aeb4a8c0a42f3b10dbe43215c89bc.Properties {
     }
 }]]></ProjectItem>
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_1c0aeb4a8c0a42f3b10dbe43215c89bc")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_1c0aeb4a8c0a42f3b10dbe43215c89bc")]
-[assembly: AssemblyCopyright("Copyright @  2024")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
